@@ -6,7 +6,7 @@ const session = require("express-session");
 
 let indexRouter = require("./routes/index");
 let usersRouter = require("./routes/users");
-let postRouter = require("./routes/posts");
+let postRouter = require("./routes/index");
 
 let app = express();
 
