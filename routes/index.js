@@ -16,18 +16,29 @@ router.post("/register", async (req, res) => {
     return res.send({work : false});
   }
   const newUser = await myDB.creatUser(user);
-  return res.send({work : true});
+  if(newUser) {
+    req.session.user = user;
+    return res.send({work : true});
+  }
 });
 
 router.post("/login", async (req, res) => {
   const user = req.body;
   const existUser = await myDB.searchUser({username: user.username});
   if (existUser && existUser.length > 0) {
-    // req.session.user = user;
-    
-    return res.send({work : true});;
+    req.session.user = user;
+    return res.send({work : true});
   }
   return res.send({work : false});
+});
+
+router.get("/logout", async (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      console.log(err);
+    }
+    res.redirect("/index.html");
+  });
 });
 
 module.exports = router;
