@@ -23,6 +23,8 @@
 -  When user input his/her username and password, this app will search in the database and findout whether this user is exists. 
 -  After login, there will pop out a window tells users that they are login successfully and turn to the home page.
 
+---
+
 ### 2. Signup Page:
 <img width="447" alt="img2" src="https://user-images.githubusercontent.com/77944820/139608758-c56a679f-7da6-43d6-819f-950a792cedd2.PNG">
 - If the username is already taken, there will appear a red bar remind users that the username is already exist.
