@@ -6,23 +6,27 @@ router.get("/", function (req, res) {
   res.render("create", {});
 });
 
-router.post("/", async (req, res, next) => {
+router.post(
+  "/",
+  async (req, res, next) => {
     req.article = new Article();
     next();
-  }, saveArticleAndRedirect("create"));
+  },
+  saveArticleAndRedirect("create")
+);
 
 function saveArticleAndRedirect(path) {
-    return async (req, res) => {
+  return async (req, res) => {
     let article = req.article;
     article.title = req.body.title;
     article.content = req.body.content;
     try {
-        article = await article.save();
-        res.redirect("/posts");
+      article = await article.save();
+      res.redirect("/posts");
     } catch (e) {
-        res.render(`posts/${path}`, { article: article });
+      res.render(`posts/${path}`, { article: article });
     }
-    };
+  };
 }
 
 module.exports = router;

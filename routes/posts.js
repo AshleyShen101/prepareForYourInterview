@@ -5,7 +5,7 @@ const myDB = require("../db/myDB.js");
 
 router.get("/", async function (req, res) {
   const posts = await Article.find({});
-  res.render("posts", {articles: posts});
+  res.render("posts", { articles: posts });
 });
 
 router.post("/create", async (req, res) => {
@@ -20,17 +20,17 @@ router.post("/create", async (req, res) => {
 
 router.get("/getPosts", async (req, res) => {
   if (!req.session.user) {
-    return res.status(401).send({ work : false });
+    return res.status(401).send({ work: false });
   }
-  res.send({ recipes: await myDB.getPosts(), work : true });
+  res.send({ recipes: await myDB.getPosts(), work: true });
 });
 
 router.get("/check", async (req, res) => {
   if (!req.session.user) {
     console.log("failed");
-    return res.status(401).send({ work : false });
+    return res.status(401).send({ work: false });
   }
-  res.send({ work : true });
+  res.send({ work: true });
 });
 
 router.delete("/:id", async (req, res) => {
