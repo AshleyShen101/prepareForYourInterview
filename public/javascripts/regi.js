@@ -1,7 +1,7 @@
 const registerForm = document.querySelector("#register");
 const error = document.querySelector("#error");
 
-if(registerForm) {
+if (registerForm) {
   registerForm.addEventListener("submit", regiHandler);
 }
 
@@ -13,7 +13,7 @@ async function regiHandler(evt) {
     return;
   }
   error.innerHTML = "";
-  const response = await fetch ("/register", {
+  const response = await fetch("/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -39,9 +39,9 @@ function getUserInfo(form) {
 
 const loginForm = document.querySelector("#login");
 
-if(loginForm) {
+if (loginForm) {
   loginForm.addEventListener("submit", loginHandler);
-};
+}
 
 async function loginHandler(evt) {
   evt.preventDefault();

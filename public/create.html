@@ -24,18 +24,19 @@
   </nav>
   <div class="container">
     <div class="col-6">
-      <br></br>
+      <br />
       <h1 class="create">Share your thoughts</h1>
-      <br></br>
-      <form id="formCreate" enctype="multipart/form-data" action="./create" method="post">
+      <br />
+      <form id="createForm" enctype="multipart/form-data" action="./create" method="post">
           <label for="title" class="label-of-form">Title:</label>
-          <input class="control-form" type="text" name="title" />
-          <br></br>
+          <input class="control-form" type="text" name="title" id="title" />
+          <br />
           <label for="content" class="label-of-form">Content:</label>
-          <br></br>
-          <textarea name="content" rows="20" cols="100"></textarea>
-          <br></br>
+          <br />
+          <textarea name="content" rows="20" cols="100" id="content"></textarea>
+          <br />
           <button type="submit" class="btn btn-primary">Create</button>
+          <div id="error" class="alert-danger" role="alert" style="margin-bottom: 8px"></div>
         </form>
     </div>
   </div>
