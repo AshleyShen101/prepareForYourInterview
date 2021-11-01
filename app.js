@@ -9,6 +9,7 @@ let indexRouter = require("./routes/index");
 let usersRouter = require("./routes/users");
 let postRouter = require("./routes/posts");
 let createRouter = require("./routes/create");
+let deleteRouter = require("./routes/delete");
 
 let app = express();
 app.set("view engine", "ejs");
@@ -36,5 +37,6 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/posts", postRouter);
 app.use("/create", createRouter);
+app.use("/delete", deleteRouter);
 
 module.exports = app;

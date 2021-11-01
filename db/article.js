@@ -5,14 +5,9 @@ const articleSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  description: {
+  content: {
     type: String
   }
-  // createdAt: {
-  //   type: Date,
-  //   default: Date.now
-  // }
-  
 }, { collection : "posts" });
 
 module.exports = mongoose.model("Article", articleSchema);

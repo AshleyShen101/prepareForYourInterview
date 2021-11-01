@@ -33,28 +33,10 @@ router.get("/check", async (req, res) => {
   res.send({ work : true });
 });
 
-router.put('/:id', async (req, res, next) => {
-  req.article = await Article.findById(req.params.id)
-  next()
-}, saveArticleAndRedirect('edit'))
-
-router.delete('/:id', async (req, res) => {
-  await Article.findByIdAndDelete(req.params.id)
-  res.redirect('/')
-})
-
-function saveArticleAndRedirect(path) {
-  return async (req, res) => {
-  let article = req.article;
-  article.title = req.body.title;
-  article.description = req.body.description;
-  try {
-      article = await article.save();
-      res.redirect("/posts");
-  } catch (e) {
-      res.render(`posts/${path}`, { article: article });
-  }
-  };
-}
+router.delete("/:id", async (req, res) => {
+  await Article.findByIdAndDelete(req.params.id);
+  console.log("尝试删除");
+  res.redirect("/");
+});
 
 module.exports = router;

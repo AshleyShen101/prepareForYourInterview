@@ -26,9 +26,9 @@
         <div class="card-body">
           
           <h4 class="card-title"><%= article.title %></h4>
-          <div class="card-text mb-2"><%= article.content %></div>
+          <div class="card-text mb-2"><pre><%= article.content %></pre></div>
 
-          <form action="/posts/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
+          <form action="./delete/<%= article.id %>" method="POST">
             <button type="submit" class="btn btn-danger">Delete</button>
           </form>
 
