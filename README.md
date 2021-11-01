@@ -3,8 +3,8 @@
 - Web Link: https://prepare-for-your-interview.herokuapp.com/
 
 # Features:
-- Users login/logout/signup
-- Posts create and view (still in process)
+- Users login/logout/signup --- Yuanyuan
+- Posts create and view (still in process) -- Zhenghao
 
 # Useful Information about This Project:
 - This is a class project of CS5610: Web Development at Northeastern University with Professor John Alexis Guerra Gómez.
