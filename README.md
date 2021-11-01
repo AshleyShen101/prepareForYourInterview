@@ -23,17 +23,17 @@
 -  When user input his/her username and password, this app will search in the database and findout whether this user is exists. 
 -  After login, there will pop out a window tells users that they are login successfully and turn to the home page.
 
-2. Signup Page:
+### 2. Signup Page:
 <img width="447" alt="img2" src="https://user-images.githubusercontent.com/77944820/139608758-c56a679f-7da6-43d6-819f-950a792cedd2.PNG">
 - If the username is already taken, there will appear a red bar remind users that the username is already exist.
 - When users signup successfully, there will pop out a window remind user that he/she is registed successfully and turn to login page.
 
-3. Logout button:
+### 3. Logout button:
 <img width="67" alt="img3" src="https://user-images.githubusercontent.com/77944820/139608766-efb643b0-bffa-4e5e-87ba-8133d0f3196f.PNG">
 - In both of create and view posts page, there will be a logout button, which enables users to logout at anytime they want.
 - After logout, it will turn to login page.
 
-4. Create Posts:
+### 4. Create Posts:
 <img width="959" alt="Capture" src="https://user-images.githubusercontent.com/77944820/139608776-d0215b9e-fefb-49d0-ace6-3634f22a7e7e.PNG">
 - Users will be able to share their thoughts on this page. 
 - After entering title and content, when user click "create", they will receive a message appreciate for what they share and turn to view posts page.
