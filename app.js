@@ -7,13 +7,8 @@ const mongoose = require("mongoose");
 
 let indexRouter = require("./routes/index");
 let usersRouter = require("./routes/users");
-<<<<<<< Updated upstream
-let postRouter = require("./routes/index");
-=======
 let postRouter = require("./routes/posts");
 let createRouter = require("./routes/create");
-const article = require("./db/article");
->>>>>>> Stashed changes
 
 let app = express();
 app.set("view engine", "ejs");
@@ -39,11 +34,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-<<<<<<< Updated upstream
-app.use("/post", postRouter);
-=======
 app.use("/posts", postRouter);
 app.use("/create", createRouter);
->>>>>>> Stashed changes
 
 module.exports = app;
