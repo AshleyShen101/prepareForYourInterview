@@ -30,6 +30,4 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/post", postRouter);
 
-
-
 module.exports = app;

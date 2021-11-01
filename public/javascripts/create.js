@@ -1,7 +1,7 @@
 const createForm = document.querySelector("#createForm");
 const error = document.querySelector("#error");
 
-if(createForm) {
+if (createForm) {
   createForm.addEventListener("submit", createHandler);
 }
 
@@ -25,7 +25,7 @@ function getPost(form) {
 async function createHandler(evt) {
   evt.preventDefault();
   const post = getPost(createForm);
-  const response = await fetch ("/create", {
+  const response = await fetch("/create", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -41,6 +41,5 @@ async function createHandler(evt) {
     error.innerHTML = "This username is taken.";
   }
 }
-
 
 load();

@@ -52,6 +52,31 @@ function Database() {
       client.close();
     }
   };
+
+  myDB.getPosts = async () => {
+    let client;
+    try {
+      client = new MongoClient(uri, { useUnifiedTopology: true });
+      await client.connect();
+      await client
+        .db(DB_NAME)
+        .collection("posts")
+        .find({})
+        .toArray((err, result) => {
+          if (err) {
+            return err;
+          } else {
+            return result;
+          }
+        });
+    } catch (e) {
+      console.log("Error", e);
+      return;
+    } finally {
+      client.close();
+    }
+  };
+
   return myDB;
 }
 
