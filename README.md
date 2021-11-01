@@ -19,7 +19,7 @@
 # How this Website Looks Like:
 ### 1. Login Page:
 <img width="952" alt="img1" src="https://user-images.githubusercontent.com/77944820/139608734-64ae2ebe-7dc6-4086-86f2-e4d0a8f7edf5.PNG">
--  If one of password or username is empty, it will remind user that please enter both of them.
+1. If one of password or username is empty, it will remind user that please enter both of them.
 -  When user input his/her username and password, this app will search in the database and findout whether this user is exists. 
 -  After login, there will pop out a window tells users that they are login successfully and turn to the home page.
 
