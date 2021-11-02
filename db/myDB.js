@@ -3,7 +3,7 @@ const { MongoClient, ObjectId } = require("mongodb");
 function Database() {
   const myDB = {};
   const uri =
-    "mongodb+srv://AshleyShen:Asyy*1234@cluster0.perfc.mongodb.net/Project0?retryWrites=true&w=majority";
+    "";
   const DB_NAME = "Project0";
 
   // create users: register
