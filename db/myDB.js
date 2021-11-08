@@ -2,15 +2,14 @@ const { MongoClient, ObjectId } = require("mongodb");
 
 function Database() {
   const myDB = {};
-  const uri =
-    "mongodb+srv://AshleyShen:Asyy*1234@cluster0.perfc.mongodb.net/Project0?retryWrites=true&w=majority";
+  const url=process.env.MONGO_URL || "mongodb://localhost:27017";
   const DB_NAME = "Project0";
 
   // create users: register
   myDB.creatUser = async (user) => {
     let client;
     try {
-      client = new MongoClient(uri, { useUnifiedTopology: true });
+      client = new MongoClient(url, { useUnifiedTopology: true });
       await client.connect();
       const res = await client.db(DB_NAME).collection("users").insertOne(user);
       console.log("Inserted", res);
@@ -26,7 +25,7 @@ function Database() {
   myDB.searchUser = async (q) => {
     let client;
     try {
-      client = new MongoClient(uri, { useUnifiedTopology: true });
+      client = new MongoClient(url, { useUnifiedTopology: true });
       await client.connect();
       const column = client.db(DB_NAME).collection("users");
       const userArr = await column.find(q).toArray();
@@ -40,7 +39,7 @@ function Database() {
   myDB.createPost = async (post) => {
     let client;
     try {
-      client = new MongoClient(uri, { useUnifiedTopology: true });
+      client = new MongoClient(url, { useUnifiedTopology: true });
       await client.connect();
       const res = await client.db(DB_NAME).collection("posts").insertOne(post);
       console.log("Inserted", res);
@@ -56,7 +55,7 @@ function Database() {
   myDB.getPosts = async () => {
     let client;
     try {
-      client = new MongoClient(uri, { useUnifiedTopology: true });
+      client = new MongoClient(url, { useUnifiedTopology: true });
       await client.connect();
       await client
         .db(DB_NAME)
