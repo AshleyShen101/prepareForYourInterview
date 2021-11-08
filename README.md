@@ -1,6 +1,8 @@
 # Prepare For Your Interview 
 - This is a forum for people who are preparing for their interviews, everyone are allowed to posts their own thoughts and experiences.
 - Web Link: https://prepare-for-your-interview.herokuapp.com/
+- Slide: https://docs.google.com/presentation/d/1qxfWkA0m3QB9q077mPNBzzeC8w5SQYFJ8WubE4fXj2Y/edit?usp=sharing
+- Video: https://www.youtube.com/watch?v=IemvEjDfmQg
 
 # Features:
 - Users login/logout/signup --- Yuanyuan
