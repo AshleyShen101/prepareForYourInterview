@@ -2,8 +2,7 @@ const { MongoClient, ObjectId } = require("mongodb");
 
 function Database() {
   const myDB = {};
-  const uri =
-    "";
+  const url = process.env.MONGO_URL || "mongodb://localhost:27017";
   const DB_NAME = "Project0";
 
   // create users: register
