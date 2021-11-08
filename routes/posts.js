@@ -35,7 +35,6 @@ router.get("/check", async (req, res) => {
 
 router.delete("/:id", async (req, res) => {
   await Article.findByIdAndDelete(req.params.id);
-  console.log("尝试删除");
   res.redirect("/");
 });
 

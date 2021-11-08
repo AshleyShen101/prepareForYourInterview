@@ -15,7 +15,7 @@ let app = express();
 app.set("view engine", "ejs");
 
 mongoose.connect(
-  "mongodb+srv://AshleyShen:Asyy*1234@cluster0.perfc.mongodb.net/Project0?retryWrites=true&w=majority"
+  ""
 );
 
 app.use(
