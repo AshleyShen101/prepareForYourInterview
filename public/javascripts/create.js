@@ -35,7 +35,7 @@ async function createHandler(evt) {
   const res = await response.json();
   if (res && res.work) {
     alert("Successfully posts! Thank you for sharing your thoughts.");
-    window.location.replace("/view.html");
+    window.location.replace("/posts");
   } else {
     res.redirect("/index.html");
     error.innerHTML = "This username is taken.";

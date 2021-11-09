@@ -5,6 +5,13 @@
 # Features:
 - Users login/logout/signup
 - Posts create and view (still in process)
+- Slide: https://docs.google.com/presentation/d/1qxfWkA0m3QB9q077mPNBzzeC8w5SQYFJ8WubE4fXj2Y/edit?usp=sharing
+- Video: https://www.youtube.com/watch?v=IemvEjDfmQg
+
+# Features:
+- Users login/logout/signup --- Yuanyuan
+- Posts create and view (still in process) -- Zhenghao
+
 
 # Useful Information about This Project:
 - This is a class project of CS5610: Web Development at Northeastern University with Professor John Alexis Guerra Gómez.
@@ -38,3 +45,6 @@ In both of create and view posts page, there will be a logout button, which enab
 ### 4. Create Posts:
 <img width="959" alt="Capture" src="https://user-images.githubusercontent.com/77944820/139608776-d0215b9e-fefb-49d0-ace6-3634f22a7e7e.PNG">
 Users will be able to share their thoughts on this page. After entering title and content, when user click "create", they will receive a message appreciate for what they share and turn to view posts page.
+
+
+

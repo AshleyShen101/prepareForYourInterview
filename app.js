@@ -3,12 +3,20 @@ let path = require("path");
 let cookieParser = require("cookie-parser");
 let logger = require("morgan");
 const session = require("express-session");
+const mongoose = require("mongoose");
 
 let indexRouter = require("./routes/index");
 let usersRouter = require("./routes/users");
-let postRouter = require("./routes/index");
+let postRouter = require("./routes/posts");
+let createRouter = require("./routes/create");
+let deleteRouter = require("./routes/delete");
 
 let app = express();
+app.set("view engine", "ejs");
+
+mongoose.connect(
+  ""
+);
 
 app.use(
   session({
@@ -20,6 +28,7 @@ app.use(
   })
 );
 
+app.set("view engine", "ejs");
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -28,6 +37,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-app.use("/post", postRouter);
+app.use("/posts", postRouter);
+app.use("/create", createRouter);
+app.use("/delete", deleteRouter);
 
 module.exports = app;

@@ -63,7 +63,7 @@ async function loginHandler(evt) {
   const res = await response.json();
   if (res && res.work) {
     alert("Successfully Login!");
-    window.location.replace("/view.html");
+    window.location.replace("/posts");
   } else {
     error.innerHTML = "Please try again later. There are something went wrong.";
   }
