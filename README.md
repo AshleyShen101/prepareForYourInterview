@@ -5,7 +5,7 @@
 - Video: https://www.youtube.com/watch?v=IemvEjDfmQg
 
 # Features:
-- Users login/logout/signup --- Yuanyuan
+- Users login/logout/signup --- Yuanyuan (Including: db folder-myDB; public folder-index.html, register.html, regi.js, style.css; routes folder-index, users)
 - Posts create and view (still in process) -- Zhenghao
 
 # Useful Information about This Project:
